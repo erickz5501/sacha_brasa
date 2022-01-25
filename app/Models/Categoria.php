@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Venta extends Model
+class Categoria extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['total_venta', 'change', 'cantidad', 'cash', 'nro_mesa', 'estado', 'usuarios_id', 'cliente_id'];
+    protected $fillable = ['nombre'];
 }
