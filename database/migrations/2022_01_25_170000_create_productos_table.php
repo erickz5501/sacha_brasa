@@ -22,7 +22,7 @@ class CreateProductosTable extends Migration
             $table->decimal('precio');
 
             $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categoria');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->timestamps();
         });
     }

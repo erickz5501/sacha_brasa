@@ -29,6 +29,10 @@
   <script src="{{ asset('/argon/assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
   <script src={{ asset('/argon/assets/vendor/sweetalert2/dist/sweetalert2.min.js')}}></script>
   <script src="{{ asset('/summernote/summernote-bs4.js') }}"></script>
+
+  <link ref="stylesheet" type="text/css" href="{{ asset('/SnackBar/dist/snackbar.min.css') }}" /> 
+  <script src="{{ asset('/SnackBar/dist/snackbar.min.js') }}"></script>
+
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   {{-- <script type="text/javascript">
     $(function() {
