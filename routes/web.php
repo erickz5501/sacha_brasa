@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function() {
-    return view('');
+Route::get('/dashboard', function() {
+    return view('dashboard.dashboard');
 });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
