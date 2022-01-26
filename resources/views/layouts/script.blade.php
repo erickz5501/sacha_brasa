@@ -85,5 +85,4 @@
 </script>
 
 @livewireScripts
-
 @yield('js')
