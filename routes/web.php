@@ -20,3 +20,6 @@ Route::get('/dashboard', function() {
 Route::get('/', function () {
     return view('auth.login');
 });
+
+Route::post('logout', 'LogoutController@store')->name('logout');
+
