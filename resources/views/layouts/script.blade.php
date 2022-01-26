@@ -28,10 +28,13 @@
   <script src="{{ asset('/argon/assets/vendor/dropzone/dist/min/dropzone.min.js')}}"></script>
   <script src="{{ asset('/argon/assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
   <script src={{ asset('/argon/assets/vendor/sweetalert2/dist/sweetalert2.min.js')}}></script>
-  <script src="{{ asset('/summernote/summernote-bs4.js') }}"></script>
 
+  {{-- SnackBar --}}
   <link ref="stylesheet" type="text/css" href="{{ asset('/SnackBar/dist/snackbar.min.css') }}" /> 
   <script src="{{ asset('/SnackBar/dist/snackbar.min.js') }}"></script>
+
+  {{-- Nicescroll --}}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   {{-- <script type="text/javascript">
@@ -55,7 +58,6 @@
   <script src="{{ asset('/argon/assets/js/argon.js?v=1.2.0')}}"></script>
   <!-- Demo JS - remove this in your project -->
   <script src="{{ asset('/argon/assets/js/demo.min.js')}}"></script>
-  <script src="{{ asset('/funciones/general.js')}}"></script>
   <script>
       var modal_lv = 0;
 
@@ -70,5 +72,18 @@
           modal_lv--;
       });
   </script>
+<script>
+  function noty(msg, option = 1){
+    Snackbar.show({
+      text: msg.toUpperCase(),
+      actionText: 'Cerrar',
+      actionTextColor: '#fff',
+      backgroundColor: option == 1 ? '#3b3f5c' : '#e7515a',
+      pos: 'top-right'
+    });
+  }
+</script>
 
-  @yield('js')
+@livewireScripts
+
+@yield('js')

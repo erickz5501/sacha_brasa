@@ -19,10 +19,7 @@
     <link rel="stylesheet" href="{{ asset('/argon/assets/vendor/quill/dist/quill.core.css')}}">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ asset('/argon/assets/css/argon.css?v=1.2.0')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('/argon/assets/css/mistylojunior.css')}}" type="text/css">
     <link rel="stylesheet" href="{{ asset('/argon/assets/vendor/sweetalert2/dist/sweetalert2.min.css')}}" type="text/css">
-
-    <link href="{{ asset('/summernote/summernote-bs4.css') }}" rel="stylesheet">
 
     @yield('extra-css')
 
@@ -37,4 +34,5 @@
             background: #ccddef !important;
         }
     </style>
+    @livewireStyles
 </head>
