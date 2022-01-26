@@ -3,8 +3,8 @@
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header  d-flex  align-items-center">
-        <a class="navbar-brand" href="../../pages/dashboards/dashboard.html">
-          <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+        <a class="navbar-brand" href="#">
+          <img src="/images/brand/blue.png" class="navbar-brand-img" alt="...">
         </a>
         <div class=" ml-auto ">
           <!-- Sidenav toggler -->
@@ -22,8 +22,8 @@
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
           <!-- Nav items -->
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../../pages/widgets.html">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../pages/widgets.html" data-active="true">
                 <i class="ni ni-archive-2 text-green"></i>
                 <span class="nav-link-text">Categorias</span>
               </a>
@@ -36,13 +36,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../pages/calendar.html">
-                <i class="ni ni-calendar-grid-58 text-red"></i>
+                <i class="fas fa-shopping-cart"></i>
                 <span class="nav-link-text">Ventas</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../pages/calendar.html">
-                <i class="ni ni-calendar-grid-58 text-red"></i>
+                <i class="fas fa-key"></i>
                 <span class="nav-link-text">Roles</span>
               </a>
             </li>
@@ -54,8 +54,32 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../pages/calendar.html">
-                <i class="ni ni-calendar-grid-58 text-red"></i>
+                <i class="fas fa-eye text-blue"></i>
                 <span class="nav-link-text">Asignar</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../pages/calendar.html">
+                <i class="fas fa-users"></i>
+                <span class="nav-link-text">Usuarios</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../pages/calendar.html">
+                <i class="fas fa-coins text-blue"></i>
+                <span class="nav-link-text">Monedas</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../pages/calendar.html">
+                <i class="fas fa-dollar-sign"></i>
+                <span class="nav-link-text">Arqueos</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../pages/calendar.html">
+                <i class="ni ni-chart-pie-35 text-info"></i>
+                <span class="nav-link-text">Reportes</span>
               </a>
             </li>
           </ul>
