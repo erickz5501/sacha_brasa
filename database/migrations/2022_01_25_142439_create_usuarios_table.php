@@ -20,7 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('celular',9);
             $table->string('direccion',90);
             $table->string('user',50);
-            $table->string('password',100);
+            $table->string('password');
             $table->enum('estado',['1','0'])->default('1');
             $table->timestamps();
         });
