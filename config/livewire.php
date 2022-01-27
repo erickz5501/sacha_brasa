@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'layout' => 'layouts.app',
+    'layout' => 'layouts.layout', //Esto es la plantilla(layout)
 
     /*
     |--------------------------------------------------------------------------

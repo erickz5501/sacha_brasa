@@ -3,15 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use app\Models\Categoria;
+use App\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
-use Livewire\WithFileUploas; //Se usa para subir imagenes - Trait
+use Livewire\WithFileUploads; //Se usa para subir imagenes - Trait
 use Livewire\WithPagination;
 
 class CategoriesController extends Component
 {
 
-    use WithFileUploas; //Se usa para subir imagenes
+    use WithFileUploads; //Se usa para subir imagenes
     use WithPagination;
 
     public $name, $search, $selected_id, $pagetitle, $componentName;
@@ -22,5 +22,6 @@ class CategoriesController extends Component
     {
         $data = Categoria::all();
         return view('livewire.categories.categories', ['categories' => $data]);
+        //Acá tambien llama a la plantilla y seleciona el yield
     }
 }

@@ -1,3 +1,4 @@
+{{-- Esto es la plantilla principal --}}
 <!DOCTYPE html>
 <html lang="es">
     @include('layouts.head')
