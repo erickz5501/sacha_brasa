@@ -3,8 +3,9 @@
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header  d-flex  align-items-center">
-        <a class="navbar-brand" href="#">
-          <img src="/images/brand/blue.png" class="navbar-brand-img" alt="...">
+        <a class="navbar-brand" href="{{url('/dashboard')}}" >
+          <img src="/images/theme/logo.jpg" alt="logo">
+          <b style="font-size: 19px color:#000000">SACHA BRASA</b>
         </a>
         <div class=" ml-auto ">
           <!-- Sidenav toggler -->
