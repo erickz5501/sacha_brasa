@@ -17,6 +17,10 @@ class CategoriesController extends Component
     public $name, $search, $selected_id, $pagetitle, $componentName;
     private $pagination = 5;
 
+    public function mount(){ //Este metodo se usa para iniciar propiedades
+        $this->pagetitle='Listado';
+        $this->componentName='Categorias';
+    }
 
     public function render()
     {

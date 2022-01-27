@@ -2,99 +2,162 @@
 
 @section('title', 'Dashboard')
 @section('pagina', 'Dashboard')
-    
+
+@section('ubicacion')
+<div class="col-lg-6 col-7">
+  <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+  <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+      <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+      <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Default</li>
+    </ol>
+  </nav>
+</div>
+{{-- Este div --}}
+</div>
+<!-- Card stats -->
+<div class="row">
+  <div class="col-xl-3 col-md-6">
+    <div class="card card-stats">
+      <!-- Card body -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title text-uppercase text-muted mb-0">Total traffic</h5>
+            <span class="h2 font-weight-bold mb-0">350,897</span>
+          </div>
+          <div class="col-auto">
+            <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+              <i class="ni ni-active-40"></i>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 mb-0 text-sm">
+          <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+          <span class="text-nowrap">Since last month</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card card-stats">
+      <!-- Card body -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title text-uppercase text-muted mb-0">New users</h5>
+            <span class="h2 font-weight-bold mb-0">2,356</span>
+          </div>
+          <div class="col-auto">
+            <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+              <i class="ni ni-chart-pie-35"></i>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 mb-0 text-sm">
+          <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+          <span class="text-nowrap">Since last month</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card card-stats">
+      <!-- Card body -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title text-uppercase text-muted mb-0">Sales</h5>
+            <span class="h2 font-weight-bold mb-0">924</span>
+          </div>
+          <div class="col-auto">
+            <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+              <i class="ni ni-money-coins"></i>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 mb-0 text-sm">
+          <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+          <span class="text-nowrap">Since last month</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 col-md-6">
+    <div class="card card-stats">
+      <!-- Card body -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title text-uppercase text-muted mb-0">Performance</h5>
+            <span class="h2 font-weight-bold mb-0">49,65%</span>
+          </div>
+          <div class="col-auto">
+            <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+              <i class="ni ni-chart-bar-32"></i>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 mb-0 text-sm">
+          <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+          <span class="text-nowrap">Since last month</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
+
 @section('content')
 <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="card">
-            <div class="card-header" style="padding-bottom: 10px !important;">
-                <div class="row ">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        Dashboard
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6  text-right" >
-                        <button onclick="limpiar_comercializacion(); modal_comercializacion();"   type="button" class="btn btn-outline-primary px-3 py-2" data-toggle="tooltip" data-html="true" title="Agregar una nueva comercialización." >
-                            <i class="fas fa-plus-circle"></i>
-                            <span > Agregar </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LISTAMOS LA TABLA COMERCIALIZACION-->
-            <div class="card-body" style="padding-top: 10px !important;" >
-                <div class="row" >
-                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3 " >
-                        <label class="media align-items-center">
-                            <span style="padding-right: 10px;">Ver </span>
-                            <select name="filtro_cant" id="filtro_cant" onchange="lista_comercializacion(1);" aria-controls="datatable-basic" class="form-control form-control-sm"  style="color: black !important; font-weight: bold !important; display: inline-block;" >
-                                <option value="3">3</option>
-                                <option selected value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                                <option value="30">30</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                                <option value="200">200</option>
-                            </select>
-                            <span style="padding: 0px 30px 0px 10px;"> registros</span>
-                        </label>
-                    </div>
-
-                    <div class="col-sm-12 col-md-4 col-lg-6 col-xl-5 ">
-                    </div>
-
-                    <div class="col-sm-12 col-md-4 col-lg-3 col-xl-4 ">
-                        <div class="input-group input-group-merge"">
-
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" style="padding: 2px 8px 2px 8px !important;"><i  class="fas fa-search"></i></span>
-                            </div>
-                            <input id="filtro_search" name="filtro_search" class="form-control form-control-sm" placeholder="Buscar cliente..." type="search" >
-                        </div>
-                    </div>
-                </div>
-                <div class="table-responsive " id="lista_tabla_comercializacion" >
-                    <table class="table align-items-center table-flush">
-                        <thead class="thead-light">
-                          <tr>
-                            <th scope="col" class="sort" data-sort="name">Descripcion</th>
-                            <th scope="col" class="sort" data-sort="budget">Imagen</th>
-                            <th scope="col" class="sort" data-sort="status">Acciones</th>
-                            
-                          </tr>
-                        </thead>
-                        <tbody class="list">
-                          <tr>
-                            <th scope="row">
-                              <div class="media align-items-center">
-                                <div class="media-body">
-                                  <span class="name mb-0 text-sm">Angular Now UI Kit PRO</span>
-                                </div>
-                              </div>
-                            </th>
-                            <td>
-                              <span>
-                                <img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded">
-                              </span>
-                            </td>
-                            <td>
-                              <a href="javascript:void(0)" class="btn btn-primary mtmobile" title="Edit">
-                                <i class="fas fa-edit"></i>
-                              </a>
-                              <a href="javascript:void(0)" class="btn btn-primary mtmobile" title="Delete">
-                                <i class="fas fa-trash"></i>
-                              </a>
-                            </td>                          
-                          </tr>                          
-                        </tbody>
-                      </table>
-                </div>
-            </div>
+  <div class="col-xl-8">
+    <div class="card bg-default">
+      <div class="card-header bg-transparent">
+        <div class="row align-items-center">
+          <div class="col">
+            <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+            <h5 class="h3 text-white mb-0">Sales value</h5>
+          </div>
+          <div class="col">
+            <ul class="nav nav-pills justify-content-end">
+              <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales-dark" data-update='{"data":{"datasets":[{"data":[0, 20, 10, 30, 15, 40, 20, 60, 60]}]}}' data-prefix="$" data-suffix="k">
+                <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
+                  <span class="d-none d-md-block">Month</span>
+                  <span class="d-md-none">M</span>
+                </a>
+              </li>              
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="card-body">
+        <!-- Chart -->
+        <div class="chart">
+          <!-- Chart wrapper -->
+          <canvas id="chart-sales-dark" class="chart-canvas"></canvas>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card">
+      <div class="card-header bg-transparent">
+        <div class="row align-items-center">
+          <div class="col">
+            <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
+            <h5 class="h3 mb-0">Total orders</h5>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <!-- Chart -->
+        <div class="chart">
+          <canvas id="chart-bars" class="chart-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 @endsection
 

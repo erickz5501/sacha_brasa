@@ -10,10 +10,10 @@
         <div class="header bg-primary pb-6">
             <div class="container-fluid">
                 <div class="header-body">
-                    <!-- MIGAJA DE PAN  -->
-                    <div class="row align-items-center py-2" style="display: none; padding-bottom: .9rem !important;" id="migaja_de_pan">
-
-                    </div>
+                    <div class="row align-items-center py-4">
+                        @yield('ubicacion')
+                    {{-- Este div esta en el contenido de ubicacion --}}
+                    {{-- </div> --}}
                 </div>
             </div>
         </div>

@@ -4,6 +4,20 @@
 @section('title', 'Categorias')
 @section('pagina', 'Categorias')
 
+@section('ubicacion')
+<div class="col-lg-6 col-7">
+  <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+  <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+      <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+      <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Default</li>
+    </ol>
+  </nav>
+</div>
+</div>
+@endsection
+
 {{-- Todo lo que este aca sera el contenido de la pagina --}}
 @section('content')
 <div class="row">
@@ -12,7 +26,7 @@
             <div class="card-header" style="padding-bottom: 10px !important;">
                 <div class="row ">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        Categorias
+                        {{$componentName}} | {{$pagetitle}}
                     </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6  text-right" >
@@ -62,27 +76,29 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                           <tr>
-                            <th scope="col" class="sort" data-sort="name">Descripcion</th>
-                            <th scope="col" class="sort" data-sort="budget">Imagen</th>
-                            <th scope="col" class="sort" data-sort="status">Acciones</th>
-                            
+                            <th scope="col" class="sort text-center" data-sort="name">N°</th>
+                            <th scope="col" class="sort text-center" data-sort="name">Nombre</th>
+                            <th scope="col" class="sort text-center" data-sort="status">Acciones</th>  
                           </tr>
                         </thead>
                         <tbody class="list">
+                          @foreach($categories as $category)
                           <tr>
-                            <th scope="row">
+                            <th scope="row" class="text-center">
                               <div class="media align-items-center">
                                 <div class="media-body">
-                                  <span class="name mb-0 text-sm">Angular Now UI Kit PRO</span>
+                                  <span class="name mb-0 text-sm">{{$category->id}}</span>
                                 </div>
                               </div>
                             </th>
-                            <td>
-                              <span>
-                                <img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded">
-                              </span>
-                            </td>
-                            <td>
+                            <th scope="row" class="text-center">
+                              <div class="media align-items-center">
+                                <div class="media-body">
+                                  <span class="name mb-0 text-sm">{{$category->nombre}}</span>
+                                </div>
+                              </div>
+                            </th>
+                            <td class="text-center">
                               <a href="javascript:void(0)" class="btn btn-primary mtmobile" title="Edit">
                                 <i class="fas fa-edit"></i>
                               </a>
@@ -90,7 +106,8 @@
                                 <i class="fas fa-trash"></i>
                               </a>
                             </td>                          
-                          </tr>                          
+                          </tr>
+                          @endforeach                     
                         </tbody>
                       </table>
                 </div>

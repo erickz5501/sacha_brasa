@@ -23,7 +23,7 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="../../pages/widgets.html" data-active="true">
+              <a class="nav-link" href="{{url('categories')}}" data-active="true">
                 <i class="ni ni-archive-2 text-green"></i>
                 <span class="nav-link-text">Categorias</span>
               </a>
