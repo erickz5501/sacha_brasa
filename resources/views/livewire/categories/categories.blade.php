@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6  text-right" >
-                        <button onclick="limpiar_comercializacion(); modal_comercializacion();"   type="button" class="btn btn-outline-primary px-3 py-2" data-toggle="tooltip" data-html="true" title="Agregar una nueva comercialización." >
+                        <button  type="button" class="btn btn-outline-primary px-3 py-2" data-toggle="modal" data-target="#theModal" title="Agregar una nueva Categoria." >
                             <i class="fas fa-plus-circle"></i>
                             <span > Agregar </span>
                         </button>
@@ -99,7 +99,7 @@
                               </div>
                             </th>
                             <td class="text-center">
-                              <a href="javascript:void(0)" class="btn btn-primary mtmobile" title="Edit">
+                              <a href="javascript:void(0)" wire:click="Edit({{$category->id}})"  class="btn btn-primary mtmobile" title="Edit">
                                 <i class="fas fa-edit"></i>
                               </a>
                               <a href="javascript:void(0)" class="btn btn-primary mtmobile" title="Delete">
@@ -114,6 +114,7 @@
             </div>
         </div>
     </div>
+    @include('livewire.categories.form')
 </div>
 @endsection
 
@@ -121,6 +122,11 @@
   <script>
     document.addEventListener('DOMContentLoaded', function(){
 
+      window.livewire.on('show-modal', msg =>{
+        $('#theModal').modal('show')
+      });
+
     });
   </script>
+
 @endsection
