@@ -5,7 +5,7 @@
 <body>
     <!-- gola pading -->
     @include('layouts.sidenav')
-    <div class="main-content" id="panel">
+    <div class="main-content" >
         @include('layouts.topnav')
         <div class="header bg-primary pb-6">
             <div class="container-fluid">
@@ -29,5 +29,7 @@
     {{-- @yield('hola') --}}
 
     @include('layouts.script')
+    
 </body>
+@livewireScripts
 </html>

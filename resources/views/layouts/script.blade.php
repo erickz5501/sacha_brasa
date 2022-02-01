@@ -36,42 +36,16 @@
   {{-- Nicescroll --}}
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
 
+  {{-- Currency --}}
+  
+
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  {{-- <script type="text/javascript">
-    $(function() {
-      $('#datetimepicker1').datetimepicker({
-        icons: {
-          time: "fa fa-clock",
-          date: "fa fa-calendar-day",
-          up: "fa fa-chevron-up",
-          down: "fa fa-chevron-down",
-          previous: 'fa fa-chevron-left',
-          next: 'fa fa-chevron-right',
-          today: 'fa fa-screenshot',
-          clear: 'fa fa-trash',
-          close: 'fa fa-remove'
-        }
-      });
-    });
-  </script> --}}
+  
   <!-- Argon JS -->
   <script src="{{ asset('/argon/assets/js/argon.js?v=1.2.0')}}"></script>
   <!-- Demo JS - remove this in your project -->
   <script src="{{ asset('/argon/assets/js/demo.min.js')}}"></script>
-  <script>
-      var modal_lv = 0;
-
-      $('.modal').on('shown.bs.modal', function (e) {
-          $(document).off('focusin.modal');
-          $('.modal-backdrop:last').css('zIndex',1051 + modal_lv);
-          $(e.currentTarget).css('zIndex',1052 + modal_lv);
-          modal_lv++;
-      });
-
-      $('.modal').on('hidden.bs.modal', function (e) {
-          modal_lv--;
-      });
-  </script>
+  
 <script>
   function noty(msg, option = 1){
     Snackbar.show({
@@ -84,5 +58,4 @@
   }
 </script>
 
-@livewireScripts
 @yield('js')
